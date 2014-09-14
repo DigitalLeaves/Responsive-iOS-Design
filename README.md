@@ -1,6 +1,6 @@
 # Responsive iOS Design
 
-Responsive iOS Design is a set of classes to show how to develop and implement a responsive iOS Design. It serves as code source and examples for the article [Towards Responsive iOS Design](http://digitalleaves.com/blog/towards-responsive-ios-design-beyond-size-classes-and-auto-layout-i/). The article deals with adaptive interfaces that respond not only in its basic layout and visual element, but in a fully responsive way to reach a full adaptation to every device screen, orientation, size and concrete constraints.
+Responsive iOS Design is a set of classes to show how to develop and implement what I call a Responsive iOS Design. It serves as code source and examples for the article [Towards Responsive iOS Design](http://digitalleaves.com/blog/towards-responsive-ios-design-beyond-size-classes-and-auto-layout-i/). The article deals with adaptive interfaces that respond not only in its basic layout and visual element, but in a fully responsive way to reach a full adaptation to every device screen, orientation, size and concrete constraints.
 
 ![](http://digitalleaves.com/blog/wp-content/uploads/2014/09/ResponsiveTableviewsCorrect.jpg)
 
