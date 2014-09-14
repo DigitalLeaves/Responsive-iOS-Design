@@ -8,7 +8,7 @@ The source code contains adaptive UITableViews and UICollectionViews that render
 
 # Use
 
-The classes are presented as examples. You just have to run the project in the simulator or your device. You will need Xcode6 Beta 6 or up and iOS 8 Beta.
+The classes are presented as examples. You just have to run the project in the simulator or your device. You will need Xcode6 Beta 6 or up and iOS 8 Beta. To include them in yout projects, just add the classes or copy & paste the code. Hope you find them useful.
 
 # License
 
