@@ -22,8 +22,8 @@ class ResponsiveSizesViewController: UIViewController {
     }
     
     
-    @IBAction func whatElseButton(sender: AnyObject) {
-        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func whatElseButton(_ sender: AnyObject) {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
 
 }

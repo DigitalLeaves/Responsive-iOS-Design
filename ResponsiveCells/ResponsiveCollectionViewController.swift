@@ -35,36 +35,36 @@ class ResponsiveCollectionViewController: UIViewController, UICollectionViewData
     
     // button actions
 
-    @IBAction func takeMeBack(sender: AnyObject) {
-        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func takeMeBack(_ sender: AnyObject) {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     // collection view data source and delegate methods
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        var cell = collectionView.dequeueReusableCellWithReuseIdentifier(kResponsiveCollectionViewCellIdentifier, forIndexPath: indexPath) as UICollectionViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kResponsiveCollectionViewCellIdentifier, for: indexPath) as UICollectionViewCell
         
         // image
         if let imageView = cell.viewWithTag(kResponsiveCollectionViewCellImageTag) as? UIImageView {
-            imageView.image = UIImage(named: entries[indexPath.row])
+            imageView.image = UIImage(named: entries[(indexPath as NSIndexPath).row])
         }
         
         return cell
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return entries.count
     }
 
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: IndexPath) -> CGSize {
         let collectionViewSize = collectionView.frame.size
-        let cellSpan = traitCollection.horizontalSizeClass == .Compact ? kReadyCategoryCollectionViewCellSpanCompact: kReadyCategoryCollectionViewCellSpanRegular
+        let cellSpan = traitCollection.horizontalSizeClass == .compact ? kReadyCategoryCollectionViewCellSpanCompact: kReadyCategoryCollectionViewCellSpanRegular
         let sideSize: Double = sqrt(Double(collectionViewSize.width * collectionViewSize.height) / (Double(entries.count))) - cellSpan
         return CGSize(width: sideSize * kResponsiveCollectionSizeProportion, height: sideSize)
     }
     
     // reacting to transitions.
-    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         collectionView.reloadData()
     }
 
